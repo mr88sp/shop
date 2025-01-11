@@ -122,7 +122,7 @@ namespace WindowsFormsApp2
 
                 Clipboard.SetText(clickedLabel.Text);
                 
-                MessageBox.Show($"متن در کلیپ بورد کپی شد");
+                MessageBox.Show($"متن در کلیپ بورد کپی نشد");
             } 
         }
     }
