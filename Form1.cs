@@ -11,6 +11,7 @@ namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
+        moshakhsat moshakhsat = new moshakhsat();
         public Form1()
         {
             InitializeComponent();
@@ -71,6 +72,8 @@ namespace WindowsFormsApp2
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
+            moshakhsat.age = textBox4.Text;
+            label21.Text = moshakhsat.age; 
 
         }
 
@@ -122,8 +125,36 @@ namespace WindowsFormsApp2
 
                 Clipboard.SetText(clickedLabel.Text);
                 
-                MessageBox.Show($"متن در کلیپ بورد کپی شد");
+                MessageBox.Show($"متن در کلیپ بورد کپی نشد");
             } 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            moshakhsat.name = textBox1.Text;
+            label18.Text = moshakhsat.name;  
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            moshakhsat.phone = textBox3.Text;
+            label19.Text = moshakhsat.phone; 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            moshakhsat.email = textBox2.Text;
+            label20.Text = moshakhsat.email;
+        }
+
+        private void button3_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            groupBox6.Visible = false;
+        }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            groupBox6.Visible = true;
         }
     }
 }
